@@ -138,13 +138,14 @@ header div {
 	justify-content: flex-end;
 	width: 20%;
 	padding-right: 1rem;
-	overflow: hidden;
+	/* overflow: hidden; */
 	/* animation-name: logoSlide;
 	animation-duration: 3s; */
 }
 
-header .services-logo {
+header .logo {
 	padding: 0;
+	width: 100%;
 }
 
 .banner {
@@ -300,6 +301,9 @@ header .services-logo {
 	padding: 0.5rem 2rem;
 	background: white;
 	margin-top: 2rem;
+	text-decoration: none;
+	color: black;
+	font-size: 12px;
 }
 
 .contact {
@@ -351,4 +355,48 @@ footer {
 .copyright {
 	text-align: center;
 	margin: 7rem 1.2rem 1.2rem 1.2rem;
+}
+
+
+/* stretch goal #1 -- make services boxes stack on top of each other on a phone */
+@media screen and (max-width: 950px) {
+	.services-offered {
+		display: flex;
+		flex-flow: column wrap;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.services-offered div {
+		display: flex;
+		flex-flow: column wrap;
+		width: 100%;
+		margin 0 auto;
+		align-items: center;
+	}
+
+	.services-offered section {
+		width: 100%;
+	}
+
+	.services-foot {
+		display: flex;
+		flex-flow: column wrap;
+		width: 80%;
+		margin: 0 auto;
+		align-items: center;
+	}
+
+	.services-foot .foot-content, .foot-img {
+		width: 100%;
+	}
+
+	.services-foot ul {
+		margin: 0 auto;
+	}
+
+	.services-foot .foot-img {
+		margin-top: 2rem;
+		justify-content: space-evenly;
+	}
 }

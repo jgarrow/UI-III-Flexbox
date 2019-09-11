@@ -1,0 +1,233 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Normalize/reset above */
+
+/* Product.html specific styling below: */
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	/* gets rid of the carriage return in between nav and div */
+	font-size: 0;
+	width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
+	background: white;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	/* for fixed navbar */
+	overflow: hidden;
+	vertical-align: middle;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+header nav {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	width: 80%;
+	/* gets rid of the carriage returns in between all of the a tags */
+	font-size: 0;
+	padding: 0;
+}
+
+header nav a {
+	width: calc(100% / 6);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	/* reverts back to initial font size so the links are visible again */
+	font-size: initial;
+	text-decoration: none;
+	color: gray;
+}
+
+header nav a:hover {
+    color: black;
+}
+
+header div {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	width: 20%;
+	padding-right: 1rem;
+}
+
+header .logo {
+	padding: 0;
+	width: 100%;
+}
+
+.banner, .mid-page-banner {
+	font-size: 0;
+	width: 80%;
+	margin: 0 auto;
+	padding: 2rem 0;
+	border-bottom: 1px solid black;
+	display: flex;
+	justify-content: space-around;
+}
+
+.banner, .mid-page-banner div {
+	display: flex;
+	flex-flow: column;
+	font-size: initial;
+}
+
+.banner div h2 {
+    font-size: 24px;
+}
+
+.banner-img, .mid-banner-img {
+	display: flex;
+    width: 100%;
+}
+
+.banner-content, .mid-banner-content {
+    margin: 2rem 0;
+}
+
+.product-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid black;
+    padding: 2rem 0;
+}
+
+.product-container div {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.product-container section {
+    width: calc(33.33% - 1rem);
+    border: 0.5px solid gray;
+    background: lightgray;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    justify-content: space-between;
+}
+
+.product-container section h3 {
+	font-size: 18px;
+}
+
+.product-container section p {
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.product-container section a {
+	border: 0.5px solid gray;
+	border-radius: 5px;
+	padding: 0.5rem 2rem;
+	background: white;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.bottom-prod-container {
+    border-bottom: none;
+}
+
+footer {
+    text-align: center;
+    margin: 7rem 1.2rem 1.2rem 1.2rem;
+}
+
+@media screen and (max-width: 950px) {
+    .product-container {
+        display: flex;
+        flex-flow: column wrap;
+        width: 80%;
+        margin 0 auto;
+    }
+
+    .product-container div {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        align-items: center;
+    }
+
+    .product-container section {
+        width: 100%;
+    }
+}
